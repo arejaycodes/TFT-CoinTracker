@@ -102,7 +102,7 @@ void getbtc() {
 void geteth() {
 	if((WiFi.status() == WL_CONNECTED)) {
 		HTTPClient http;
-		http.begin("http://lookuptool.work/testbed/price.php"); //HTTP
+		http.begin("https://api.coinmarketcap.com/v2/ticker/?limit=3"); //HTTP
 		int httpCode = http.GET();
 		if(httpCode > 0) {
 			if(httpCode == HTTP_CODE_OK) {
